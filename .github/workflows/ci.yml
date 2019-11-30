@@ -10,10 +10,18 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Build and Deploy
+    - name: Install
+      run: |
+        sudo npm install -g gitbook-cli
+        gitbook install
+
+    - name: Build
+      run: |
+        gitbook build
+
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install -g gitbook-cli & gitbook install & gitbook build
+        FOLDER: _book
