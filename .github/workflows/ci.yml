@@ -24,8 +24,8 @@ jobs:
         touch _book/.nojekyll
 
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+      uses: peaceiris/actions-gh-pages@v2
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: _book
+        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: _book
