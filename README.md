@@ -22,3 +22,7 @@ shell: `book sm`
 
 shell: `git commit` 自动提交后执行action生成gitbook到github pages上。
 
+
+### 3. gitbook踩坑
+
+https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/m-p/26869/highlight/true#M301

@@ -6,6 +6,5 @@
     "lunr",
     "search",
     "highlight"
-  ],
-  "ignores": ["_book", "node_modules"]
+  ]
 }
