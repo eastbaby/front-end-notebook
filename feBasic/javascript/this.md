@@ -1,3 +1,5 @@
 
 当作为构造函数时，构造函数内部的 this 指向实例。
 
+<https://tech-query.me/programming/javascript-in-one-word/>
+

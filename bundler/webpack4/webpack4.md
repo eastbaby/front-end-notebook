@@ -294,7 +294,32 @@ tree shaking 优秀文章：
 
 当某个模块的 `package.json` 文件中有了`sideEffects: false`这个声明之后，webpack 会认为这个模块没有任何副作用，只是单纯用来对外暴露模块使用，那么在打包的时候就会做一些额外的处理。
 
+### 5. 按需加载
 
+babel-plugin-import vs. treeshaking
+
+`babel-plugin-import`插件可以实现`js`,`css`的按需加载，本质上就是将`按需引入`的方式变更为`直接引入`的方式。 如果配置了`style`字段，同时也会注入`style`的直接引入代码。
+
+```js
+import { Button } from 'antd'; 
+---转换成---
+import Button from 'antd/es/button';
+import 'antd/es/button/style'; （如果babel配置了style：true样式也可以按需引入）
+```
+
+`tree shaking`只针对于`js`，`css`如果需要按需加载，需要手动直接引入。
+
+相比之下，由于`tree shaking`只针对于`js`，`babel-plugin-import`会更方便。`babel-plugin-import`和`tree shaking`也可以并存使用。并存使用在有些情况，体积会相对小一点，但与单独使用体积差距不大。
+
+一个例子：
+
+**lodash 瘦身** 按需打包loadash的三种方法：<https://juejin.im/entry/5ca45ad7e51d452c02246d26>
+
+**moment瘦身**  <https://github.com/jmblog/how-to-optimize-momentjs-with-webpack>
+
+<https://www.npmjs.com/package/babel-plugin-import>
+
+参考文章：<https://juejin.im/post/5d2c248151882556d1683363>
 
 ##提升构建速度
 
