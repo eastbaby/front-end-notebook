@@ -257,9 +257,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.3" data-path="../../feBasic/javascript/promise.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="../../feBasic/javascript/promise.md">
             
-                <a href="../../feBasic/javascript/promise.html">
+                <span>
             
                     
                     Promise
@@ -423,13 +423,32 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="react-hooks">React Hooks</h1>
+<h3 id="1-&#x57FA;&#x7840;&#x7528;&#x6CD5;">1. &#x57FA;&#x7840;&#x7528;&#x6CD5;</h3>
 <p>&#x975E;&#x5E38;&#x597D;&#x7684;&#x6587;&#x7AE0;&#xFF1A;<a href="https://github.com/happylindz/blog/issues/19" target="_blank">https://github.com/happylindz/blog/issues/19</a></p>
 <p>useState&#x3001;useEffect&#x3001;useContext&#x3001;useReducer&#x3001;</p>
 <p>useCallback&#xFF08;&#x8BB0;&#x5FC6;&#x51FD;&#x6570;&#xFF0C;&#x914D;&#x5408;pureComponent/memo&#x66F4;&#x4F73;&#xFF09;&#x3001;useMemo&#xFF08;&#x8BB0;&#x5FC6;&#x7EC4;&#x4EF6;&#xFF09;&#x3001;</p>
 <p>useRef&#xFF08;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x907F;&#x514D;function&#x7EC4;&#x4EF6;&#x7684;capture value&#x7279;&#x6027;&#xFF09;&#x3001;</p>
 <p>useImperativeHandle&#xFF08;&#x914D;&#x5408;forwardRef&#x4F7F;&#x7528;&#xFF09;&#x3001;useLayoutEffect &#xFF08;&#x540C;&#x6B65;&#x6267;&#x884C;&#x526F;&#x4F5C;&#x7528;&#xFF0C;&#x65F6;&#x673A;&#xFF1A;Dom&#x66F4;&#x65B0;-&gt; &#x540C;&#x6B65;useLayoutEffect -&gt; &#x5F02;&#x6B65;useEffect &#xFF09;</p>
-<p><strong>React Hooks &#x4E0D;&#x8DB3;</strong></p>
-<p>&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x770B;&#x5230; React Hooks &#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#xFF0C;&#x4F3C;&#x4E4E;&#x7C7B;&#x7EC4;&#x4EF6;&#x5B8C;&#x5168;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; React Hooks &#x91CD;&#x5199;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x4E0B; v16.8 &#x7684;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x8FD8;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0; getSnapshotBeforeUpdate &#x548C; componentDidCatch &#x8FD9;&#x4E24;&#x4E2A;&#x5728;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3002;&#x5B98;&#x65B9;&#x4E5F;&#x8BA1;&#x5212;&#x5728;&#x4E0D;&#x4E45;&#x7684;&#x5C06;&#x6765;&#x5728; React Hooks &#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#x3002;</p>
+<p><strong>React Hooks &#x4F18;&#x7F3A;&#x70B9;</strong></p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x770B;&#x5230; React Hooks &#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#xFF0C;&#x4F3C;&#x4E4E;&#x7C7B;&#x7EC4;&#x4EF6;&#x5B8C;&#x5168;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; React Hooks &#x91CD;&#x5199;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x4E0B; v16.8 &#x7684;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x8FD8;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0; getSnapshotBeforeUpdate &#x548C; componentDidCatch &#x8FD9;&#x4E24;&#x4E2A;&#x5728;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3002;&#x5B98;&#x65B9;&#x4E5F;&#x8BA1;&#x5212;&#x5728;&#x4E0D;&#x4E45;&#x7684;&#x5C06;&#x6765;&#x5728; React Hooks &#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Hooks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x6E05;&#x6670;&#xFF08;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;componentDidMount &#x7B49;&#xFF09;</td>
+<td>&#x9700;&#x8981;&#x914D;&#x5408;&#x53D8;&#x91CF;&#x540D;&#x548C;&#x6CE8;&#x91CA;</td>
+</tr>
+<tr>
+<td>&#x4E0D;&#x5BB9;&#x6613;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</td>
+<td>&#x5BB9;&#x6613;&#x53D1;&#x751F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Hooks&#x57FA;&#x7840;&#x7528;&#x6CD5;</strong></p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
 <span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span>;
@@ -447,7 +466,9 @@
       <span class="hljs-built_in">document</span>.title = <span class="hljs-string">&quot;componentWillUnmount&quot;</span>;
       clearInterval(timer);
     };
-  }, []); <span class="hljs-comment">// &#x4E0D;&#x76D1;&#x542C;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x53D8;&#x5316;.&#x4EE3;&#x66FF; componentDidMount &#x548C; componentWillUnmount.</span>
+  }); <span class="hljs-comment">// case1 &#x4E0D;&#x76D1;&#x542C;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x53D8;&#x5316;.&#x4EE3;&#x66FF; componentDidMount componentDidUpdate &#x548C; componentWillUnmount.</span>
+  <span class="hljs-comment">// case2 &#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;. &#x4EE3;&#x66FF; componentDidMount &#x548C; componentWillUnmount.</span>
+  <span class="hljs-comment">// case3 &#x5982;&#x679C;&#x6709;&#x76D1;&#x542C;&#x6570;&#x636E;&#x7684;&#x8BDD;&#xFF0C;&#x80FD;&#x7C7B;&#x4F3C;&#x53C2;&#x4E0E;componentDidUpdate&#x7684;&#x6BD4;&#x8F83;&#x9636;&#x6BB5;&#xFF0C;&#x8DF3;&#x8FC7;effect&#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316; [See. https://zh-hans.reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects] &#x4F46;&#x662F;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x4E2A;&#x5751;&#xFF01;&#xFF08;&#x89C1;&#x4E0B;&#x65B9;&#xFF09;</span>
   <span class="hljs-keyword">return</span> (
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       Count: {count}
@@ -456,7 +477,21 @@
   );
 }
 </code></pre>
-<h3 id="&#x6A21;&#x62DF;class&#x7684;&#x5404;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;">&#x6A21;&#x62DF;class&#x7684;&#x5404;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<h4 id="usestate">useState</h4>
+<p>&#x539F;&#x7406;&#xFF1A;<a href="https://xin-tan.com/passages/2019-10-21-react-hooks/" target="_blank">https://xin-tan.com/passages/2019-10-21-react-hooks/</a></p>
+<p>&#x57FA;&#x4E8E; Array+Cursor &#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="useeffect">useEffect</h4>
+<p>&#x539F;&#x7406;&#xFF1A;<a href="https://xin-tan.com/passages/2019-10-21-react-hooks/" target="_blank">https://xin-tan.com/passages/2019-10-21-react-hooks/</a></p>
+<p><strong>useEffect &#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x540E;&#x90FD;&#x6267;&#x884C;&#x5417;&#xFF1F;</strong> &#x662F;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x4E4B;&#x540E;<em>&#x548C;</em>&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF08;&#x5373;&#xFF1A;<strong>didmount + didupdate</strong>&#xFF09;&#x3002;&#xFF08;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x4F1A;&#x8C08;&#x5230;<a href="https://zh-hans.reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects" target="_blank">&#x5982;&#x4F55;&#x63A7;&#x5236;&#x5B83;</a>&#x3002;&#xFF09;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x5BB9;&#x6613;&#x63A5;&#x53D7; effect &#x53D1;&#x751F;&#x5728;&#x201C;&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#x201D;&#x8FD9;&#x79CD;&#x6982;&#x5FF5;&#xFF0C;&#x4E0D;&#x7528;&#x518D;&#x53BB;&#x8003;&#x8651;&#x201C;&#x6302;&#x8F7D;&#x201D;&#x8FD8;&#x662F;&#x201C;&#x66F4;&#x65B0;&#x201D;&#x3002;React &#x4FDD;&#x8BC1;&#x4E86;&#x6BCF;&#x6B21;&#x8FD0;&#x884C; effect &#x7684;&#x540C;&#x65F6;&#xFF0C;DOM &#x90FD;&#x5DF2;&#x7ECF;&#x66F4;&#x65B0;&#x5B8C;&#x6BD5;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8981;&#x8FD0;&#x884C; Effect <a href="https://zh-hans.reactjs.org/docs/hooks-effect.html#explanation-why-effects-run-on-each-update" target="_blank">https://zh-hans.reactjs.org/docs/hooks-effect.html#explanation-why-effects-run-on-each-update</a>&#xFF0C;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x66F4;&#x591A;bug free&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4F7F;&#x7528;case3&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x76D1;&#x542C;&#x5143;&#x7D20;&#x6B64;&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x542B;&#x4E86;<strong>&#x6240;&#x6709;&#x5916;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x4F1A;&#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x5E76;&#x4E14;&#x5728; effect &#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;</strong>&#xFF0C;&#x5426;&#x5219;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x5F15;&#x7528;&#x5230;&#x5148;&#x524D;&#x6E32;&#x67D3;&#x4E2D;&#x7684;&#x65E7;&#x53D8;&#x91CF;&#x3002;&#xFF08;&#x6BD4;&#x5982;&#x7528;swiper&#x7684;&#x65F6;&#x5019;&#x6709;&#x8E29;&#x5751;&#xFF09;&#x3002;&#x53C2;&#x9605;&#x6587;&#x6863;&#xFF0C;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;<a href="https://zh-hans.reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies" target="_blank">&#x5982;&#x4F55;&#x5904;&#x7406;&#x51FD;&#x6570;</a>&#x4EE5;&#x53CA;<a href="https://zh-hans.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often" target="_blank">&#x6570;&#x7EC4;&#x9891;&#x7E41;&#x53D8;&#x5316;&#x65F6;&#x7684;&#x63AA;&#x65BD;</a>&#x5185;&#x5BB9;&#x3002;</p>
+<p><a href="https://zh-hans.reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies" target="_blank">&#x5982;&#x4F55;&#x5904;&#x7406;&#x51FD;&#x6570;</a> &#x8FD9;&#x91CC;&#x63D0;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5728;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;useCallback&#x5305;&#x88F9;&#x3002;</p>
+<p>&#x6BD4;&#x8F83;deps&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;object&#xFF0C;&#x4E0D;&#x662F;&#x6DF1;&#x5EA6;&#x6BD4;&#x8F83;&#xFF0C;&#x800C;&#x662F;&#x7528;&#x7684;<code>is</code>&#x3002;see.<a href="https://github.com/facebook/react/blob/c1d3f7f1a9/packages/shared/objectIs.js?spm=ata.13261165.0.0.6dee5600znB8bR#L14" target="_blank">https://github.com/facebook/react/blob/c1d3f7f1a9/packages/shared/objectIs.js?spm=ata.13261165.0.0.6dee5600znB8bR#L14</a></p>
+<p>&#x7528;useEffect&#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x8981;&#x5C0F;&#x5FC3;&#x95ED;&#x5305;&#x7684;&#x5751;&#x3002;&#x5982;&#x679C;&#x5728;useEffect&#x91CC;&#x9762;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x7528;<code>setCount(num + 1)</code>  &#x7684;&#x65F6;&#x5019;&#x62FF;&#x5230;&#x7684;<code>num</code> &#x53EA;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x66F4;&#x65B0;&#x5230;&#x65B0;&#x7684;<code>num</code>&#x3002;&#x539F;&#x56E0;&#xFF1A;state&#x5728;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x503C;&#x3002;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;&#x7528;&#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;&#x5199;<code>setCount</code>&#xFF0C;&#x5373;&#x4F7F;&#x9500;&#x6BC1;&#x4E8B;&#x4EF6;&#x6216;&#x8005;&#x7528;useRef&#x8FC2;&#x56DE;&#x3002;</p>
+<blockquote>
+<p>&#x4E0E; <code>componentDidMount</code> &#x6216; <code>componentDidUpdate</code> &#x4E0D;&#x540C;&#xFF0C;&#x4F7F;&#x7528; <code>useEffect</code> &#x8C03;&#x5EA6;&#x7684; effect &#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x6D4F;&#x89C8;&#x5668;&#x66F4;&#x65B0;&#x5C4F;&#x5E55;&#xFF0C;&#x8FD9;&#x8BA9;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x770B;&#x8D77;&#x6765;&#x54CD;&#x5E94;&#x66F4;&#x5FEB;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;effect &#x4E0D;&#x9700;&#x8981;&#x540C;&#x6B65;&#x5730;&#x6267;&#x884C;&#x3002;&#x5728;&#x4E2A;&#x522B;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x4F8B;&#x5982;&#x6D4B;&#x91CF;&#x5E03;&#x5C40;&#xFF09;&#xFF0C;&#x6709;&#x5355;&#x72EC;&#x7684; <a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#uselayouteffect" target="_blank"><code>useLayoutEffect</code></a> Hook &#x4F9B;&#x4F60;&#x4F7F;&#x7528;&#xFF0C;&#x5176; API &#x4E0E; <code>useEffect</code> &#x76F8;&#x540C;&#x3002;</p>
+</blockquote>
+<h3 id="2-&#x6A21;&#x62DF;class&#x7684;&#x5404;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;">2. &#x6A21;&#x62DF;class&#x7684;&#x5404;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;</h3>
 <ul>
 <li>componentDidUpdate </li>
 </ul>
@@ -512,12 +547,41 @@
 <li>&#x4E0D;&#x8DB3;</li>
 </ul>
 <p>&#x5F53;&#x4E0B; v16.8 &#x7684;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x8FD8;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0; getSnapshotBeforeUpdate &#x548C; componentDidCatch &#x8FD9;&#x4E24;&#x4E2A;&#x5728;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3002;</p>
-<h3 id="usememo">useMemo</h3>
+<h3 id="&#x66F4;&#x591A;&#x7406;&#x89E3;">&#x66F4;&#x591A;&#x7406;&#x89E3;</h3>
+<h4 id="useref">useRef</h4>
+<p><code>useRef</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684; ref &#x5BF9;&#x8C61;&#xFF0C;&#x5176; <code>.current</code> &#x5C5E;&#x6027;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF08;<code>initialValue</code>&#xFF09;&#xFF08;&#x5982;&#x679C;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x4F20;&#x662F;<code>undefined</code>)&#x3002;&#x8FD4;&#x56DE;&#x7684; ref &#x5BF9;&#x8C61;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;<strong>&#x4FDD;&#x6301;&#x4E0D;&#x53D8;</strong>&#x3002;</p>
+<p>useRef &#x795E;&#x5947;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x6A21;&#x62DF;class&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF; <a href="https://zh-hans.reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables" target="_blank">https://zh-hans.reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables</a></li>
+<li>&#x907F;&#x514D;function&#x7684;capture value&#x7279;&#x70B9;&#x3002;&#x56E0;&#x4E3A;&#xFF0C; ref &#x5728;&#x6240;&#x6709; Render &#x8FC7;&#x7A0B;&#x4E2D;&#x4FDD;&#x6301;&#x7740;&#x552F;&#x4E00;&#x5F15;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x6240;&#x6709;&#x5BF9; ref &#x7684;&#x8D4B;&#x503C;&#x6216;&#x53D6;&#x503C;&#xFF0C;&#x62FF;&#x5230;&#x7684;&#x90FD;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6700;&#x7EC8;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A; Render &#x95F4;&#x5B58;&#x5728;&#x9694;&#x79BB;&#x3002;</li>
+</ul>
+<h4 id="capture-value">capture value</h4>
+<p>&#x4F8B;&#x5B50;&#x4E00;&#xFF1A;state  <a href="https://github.com/happylindz/blog/issues/19" target="_blank">https://github.com/happylindz/blog/issues/19</a></p>
+<p>&#x4F8B;&#x5B50;&#x800C;&#xFF1A;props <a href="https://juejin.im/post/5c8eec1bf265da67cb619e79#heading-2" target="_blank">https://juejin.im/post/5c8eec1bf265da67cb619e79#heading-2</a></p>
+<h4 id="usecallback">useCallback</h4>
+<p><a href="https://zhuanlan.zhihu.com/p/56975681" target="_blank">https://zhuanlan.zhihu.com/p/56975681</a></p>
+<p>&#x5F53;deps&#x662F;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5EFA;&#x8BAE;&#x90FD;&#x5305;&#x88F9;&#x4E00;&#x4E0B;&#x3002;</p>
+<h4 id="usememo">useMemo</h4>
 <p>&#x8BB0;&#x4F4F;&#xFF0C;&#x4F20;&#x5165; <code>useMemo</code> &#x7684;&#x51FD;&#x6570;&#x4F1A;&#x5728;<strong>&#x6E32;&#x67D3;&#x671F;&#x95F4;</strong>&#x6267;&#x884C;&#x3002;&#x8BF7;&#x4E0D;&#x8981;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x6267;&#x884C;&#x4E0E;&#x6E32;&#x67D3;&#x65E0;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8BF8;&#x5982;&#x526F;&#x4F5C;&#x7528;&#x8FD9;&#x7C7B;&#x7684;&#x64CD;&#x4F5C;&#x5C5E;&#x4E8E; <code>useEffect</code> &#x7684;&#x9002;&#x7528;&#x8303;&#x7574;&#xFF0C;&#x800C;&#x4E0D;&#x662F; <code>useMemo</code>&#x3002;</p>
+<h4 id="usecontext">useContext</h4>
+<p>&#x63A8;&#x8350;&#x7528;unstated-next&#x66F4;&#x597D;&#x7528;&#x4E14;&#x5B89;&#x5168;&#x3002;<a href="https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md" target="_blank">https://github.com/jamiebuilds/unstated-next/blob/master/README-zh-cn.md</a></p>
+<h4 id="hooks&#x7F16;&#x7801;&#x6CE8;&#x610F;&#x4E8B;&#x9879;">hooks&#x7F16;&#x7801;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h4>
+<ul>
+<li>hooks api&#x524D;&#x9762;&#x4E0D;&#x80FD;&#x6709;return&#xFF08;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;hooks&#x7684;&#x6570;&#x91CF;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5F15;&#x53D1;error&#xFF09;</li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/53472795/uncaught-error-rendered-fewer-hooks-than-expected-this-may-be-caused-by-an-acc&gt;" target="_blank">https://stackoverflow.com/questions/53472795/uncaught-error-rendered-fewer-hooks-than-expected-this-may-be-caused-by-an-acc&gt;</a></p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;hooks&#x6709;&#x4E2A;&#x8981;&#x6C42;&#xFF1A;&#x5728;&#x4F7F;&#x7528; Hook &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF7;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x9876;&#x90E8;&#x4F7F;&#x7528;&#xFF01;&#x4E0D;&#x80FD;&#x5728;&#x5FAA;&#x73AF;&#x3001;&#x5224;&#x65AD;&#x5185;&#x90E8;&#x4F7F;&#x7528; Hook&#x3002;</p>
+<p>&#x539F;&#x7406;&#xFF1A;<a href="https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e" target="_blank">&#x300A;React hooks: not magic, just arrays&#x300B;</a>&#x4E2D;&#x63D0;&#x53CA;&#xFF0C;React Hook &#x770B;&#x8D77;&#x6765;&#x975E;&#x5E38; Magic &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x8FD8;&#x662F;&#x901A;&#x8FC7; Array &#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<ul>
+<li>&#x4E00;&#x5B9A;&#x8981;&#x8BB0;&#x5F97;&#x5F00;&#x542F;hooks lint <a href="https://www.npmjs.com/package/eslint-plugin-react-hooks" target="_blank">https://www.npmjs.com/package/eslint-plugin-react-hooks</a></li>
+</ul>
 <h2 id="&#x66F4;&#x591A;&#x9605;&#x8BFB;">&#x66F4;&#x591A;&#x9605;&#x8BFB;</h2>
 <p>&#x7CBE;&#x5EA6;&#x7CFB;&#x5217; <a href="https://zhuanlan.zhihu.com/p/59558396" target="_blank">https://zhuanlan.zhihu.com/p/59558396</a></p>
 <p>Should I useState or useReducer? <a href="https://kentcdodds.com/blog/should-i-usestate-or-usereducer" target="_blank">https://kentcdodds.com/blog/should-i-usestate-or-usereducer</a></p>
 <p>2019&#x5E74;&#x4E86;&#xFF0C;&#x6574;&#x7406;&#x4E86;N&#x4E2A;&#x5B9E;&#x7528;&#x6848;&#x4F8B;&#x5E2E;&#x4F60;&#x5FEB;&#x901F;&#x8FC1;&#x79FB;&#x5230;React Hooks&#xFF1A;<a href="https://juejin.im/post/5d594ea5518825041301bbcb" target="_blank">https://juejin.im/post/5d594ea5518825041301bbcb</a></p>
+<p>[TODO] React Hooks &#x6DF1;&#x5165;&#x4E0D;&#x6D45;&#x51FA;&#xFF1A;<a href="https://juejin.im/post/5bfe93566fb9a049c30af2db" target="_blank">https://juejin.im/post/5bfe93566fb9a049c30af2db</a></p>
+<p>&#x4E00;&#x6587;&#x5F7B;&#x5E95;&#x641E;&#x61C2;react hooks&#x7684;&#x539F;&#x7406;&#x548C;&#x5B9E;&#x73B0;&#xFF1A;<a href="https://xin-tan.com/passages/2019-10-21-react-hooks/" target="_blank">https://xin-tan.com/passages/2019-10-21-react-hooks/</a></p>
+<p>[TODO] react hooks &#x539F;&#x7406;&#xFF1A;<a href="https://github.com/brickspert/blog/issues/26" target="_blank">https://github.com/brickspert/blog/issues/26</a></p>
 
                                 
                                 </section>
@@ -557,7 +621,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Hooks","level":"1.5.1","depth":2,"previous":{"title":"React","level":"1.5","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"Hooks","level":"1.5.1","depth":2,"path":"react/hooks/README.md","ref":"react/hooks/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/hooks/README.md","mtime":"2020-01-29T14:58:03.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-29T14:58:50.187Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Hooks","level":"1.5.1","depth":2,"previous":{"title":"React","level":"1.5","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"Hooks","level":"1.5.1","depth":2,"path":"react/hooks/README.md","ref":"react/hooks/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/hooks/README.md","mtime":"2020-03-21T14:54:08.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T14:54:48.723Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

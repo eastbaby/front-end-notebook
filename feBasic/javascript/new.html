@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="promise.html" />
+    <link rel="next" href="promise.md" />
     
     
     <link rel="prev" href="call-apply-bind.html" />
@@ -259,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.3" data-path="promise.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="promise.md">
             
-                <a href="promise.html">
+                <span>
             
                     
                     Promise
@@ -424,19 +424,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x6A21;&#x62DF;&#x5B9E;&#x73B0;:</p>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Otaku</span> (<span class="hljs-params"></span>) </span>{
+                                <h3 id="new-&#x7684;&#x7406;&#x89E3;">new &#x7684;&#x7406;&#x89E3;</h3>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x88AB;&#x6267;&#x884C; <code>[[Prototype]]</code> &#x8FDE;&#x63A5;</li>
+<li>&#x5C06;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7ED1;&#x5B9A;&#x5230;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7684; <code>this</code></li>
+<li>&#x5982;&#x679C;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#xFF0C;&#x5219; <code>new</code> &#x64CD;&#x4F5C;&#x7B26;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;</li>
+</ul>
+<h3 id="&#x6A21;&#x62DF;&#x5B9E;&#x73B0;">&#x6A21;&#x62DF;&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Tony</span> (<span class="hljs-params"></span>) </span>{
     &#x2026;&#x2026;
 }
 
 <span class="hljs-comment">// &#x4F7F;&#x7528; new</span>
-<span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Otaku(&#x2026;&#x2026;);
+<span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> Tony(&#x2026;&#x2026;);
 <span class="hljs-comment">// &#x4F7F;&#x7528; objectFactory</span>
-<span class="hljs-keyword">var</span> person = objectFactory(Otaku, &#x2026;&#x2026;)
+<span class="hljs-keyword">var</span> person = objectFactory(Tony, &#x2026;&#x2026;)
 </code></pre>
 <pre><code class="lang-js"><span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x7248;&#x7684;&#x4EE3;&#x7801;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">objectFactory</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>(), Constructor = [].shift.call(<span class="hljs-built_in">arguments</span>);
+    <span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+    <span class="hljs-keyword">var</span> Constructor = [].shift.call(<span class="hljs-built_in">arguments</span>);
     obj.__proto__ = Constructor.prototype;
     <span class="hljs-keyword">var</span> ret = Constructor.apply(obj, <span class="hljs-built_in">arguments</span>);
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> ret === <span class="hljs-string">&apos;object&apos;</span> ? ret : obj; <span class="hljs-comment">// &#x7279;&#x522B;&#x6CE8;&#x610F;&#x5982;&#x679C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</span>
@@ -475,7 +483,7 @@
                 </a>
                 
                 
-                <a href="promise.html" class="navigation navigation-next " aria-label="Next page: Promise">
+                <a href="promise.md" class="navigation navigation-next " aria-label="Next page: Promise">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -486,7 +494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"New","level":"1.4.3.2","depth":3,"next":{"title":"Promise","level":"1.4.3.3","depth":3,"path":"feBasic/javascript/promise.md","ref":"feBasic/javascript/promise.md","articles":[]},"previous":{"title":"Call Apply Bind","level":"1.4.3.1","depth":3,"path":"feBasic/javascript/call-apply-bind.md","ref":"feBasic/javascript/call-apply-bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"feBasic/javascript/new.md","mtime":"2020-01-29T14:58:03.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-29T14:58:50.187Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"New","level":"1.4.3.2","depth":3,"next":{"title":"Promise","level":"1.4.3.3","depth":3,"path":"feBasic/javascript/promise.md","ref":"feBasic/javascript/promise.md","articles":[]},"previous":{"title":"Call Apply Bind","level":"1.4.3.1","depth":3,"path":"feBasic/javascript/call-apply-bind.md","ref":"feBasic/javascript/call-apply-bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"feBasic/javascript/new.md","mtime":"2020-03-21T14:54:08.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T14:54:48.723Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

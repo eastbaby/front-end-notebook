@@ -259,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.3" data-path="promise.html">
+        <li class="chapter " data-level="1.4.3.3" data-path="promise.md">
             
-                <a href="promise.html">
+                <span>
             
                     
                     Promise
@@ -429,8 +429,17 @@
 <p>&#x51FD;&#x6570;&#x8282;&#x6D41;&#x548C;&#x51FD;&#x6570;&#x9632;&#x6296;&#x4E8C;&#x8005;&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x6DF7;&#x6DC6;&#x8D77;&#x6765;&#x3002;&#x4E0B;&#x9762;&#x8D34;&#x82F1;&#x6587;&#x539F;&#x6587;&#xFF0C;&#x5EFA;&#x8BAE;&#x8BA4;&#x771F;&#x9605;&#x8BFB;&#xFF1A;
 Debouncing enforces that a function not be called again until a certain amount of time has passed without it being called. As in &quot;<strong>execute this function only if 100 milliseconds have passed without it being called</strong>&quot;.
 Throttling enforces a maximum number of times a function can be called over time. As in &quot;<strong>execute this function at most once every 100 milliseconds</strong>&quot;.</p>
-<p>&#x51FD;&#x6570;&#x9632;&#x6296;&#xFF1A;&#x51FD;&#x6570;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x4E0D;&#x88AB;&#x518D;&#x8C03;&#x7528;&#x540E;&#x6267;&#x884C;&#x3002;</p>
-<p>&#x51FD;&#x6570;&#x8282;&#x6D41;&#xFF1A;&#x786E;&#x4FDD;&#x51FD;&#x6570;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x81F3;&#x591A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x9632;&#x6296;&#xFF1A;&#x51FD;&#x6570;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x518D;&#x88AB;&#x8C03;&#x7528;&#x540E;&#x6267;&#x884C;&#x3002;eg: &#x8F93;&#x5165;&#x6846;&#x9891;&#x9891;&#x7E41;&#x64CD;&#x4F5C; <strong>&#x51FD;&#x6570;&#x8282;&#x6D41;&#x662F;&#x4ECE;&#x7528;&#x6237;&#x505C;&#x6B62;&#x8F93;&#x5165;&#x5F00;&#x59CB;&#x8BA1;&#x65F6;</strong></p>
+<p>&#x51FD;&#x6570;&#x8282;&#x6D41;&#xFF1A;&#x786E;&#x4FDD;&#x51FD;&#x6570;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x81F3;&#x591A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;eg: &#x6027;&#x80FD;&#x8003;&#x8651; <strong>&#x51FD;&#x6570;&#x8282;&#x6D41;&#x662F;&#x4ECE;&#x7528;&#x6237;&#x5F00;&#x59CB;&#x8F93;&#x5165;&#x5C31;&#x5F00;&#x59CB;&#x8BA1;&#x65F6;</strong></p>
+<blockquote>
+<p>&#x5927;&#x90E8;&#x5206;&#x7684;&#x5B8C;&#x6574; <code>debounce</code> &#x5B9E;&#x73B0;&#x8FD8;&#x6709;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570; <code>immediate</code> &#xFF0C;&#x8868;&#x660E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x533A;&#x95F4;&#x7684;&#x6700;&#x5F00;&#x59CB;&#x6267;&#x884C;&#xFF08;<code>immediate</code> &#x4E3A; <code>true</code>&#xFF09;&#x8FD8;&#x662F;&#x6700;&#x540E;&#x6267;&#x884C;&#xFF08;<code>immediate</code> &#x4E3A; <code>false</code>&#xFF09;&#x3002;&#x4E00;&#x822C;demo&#x91CC;&#x9762;&#x662F;&#x505A;&#x7684;&#x6700;&#x540E;&#x6267;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x9632;&#x6296;&#x4E00;&#x822C;&#x76F4;&#x63A5;&#x5305;&#x88F9;&#x5728;&#x4E8B;&#x4EF6;&#x5916;&#x9762;&#x3002;</p>
+<h2 id="&#x66F4;&#x591A;&#x9605;&#x8BFB;">&#x66F4;&#x591A;&#x9605;&#x8BFB;</h2>
+<p>debounce&#x9010;&#x6B65;&#x4F18;&#x5316;&#x5B9E;&#x73B0;&#xFF1A;<a href="https://juejin.im/post/5c270ae16fb9a049bb7c69c2" target="_blank">https://juejin.im/post/5c270ae16fb9a049bb7c69c2</a></p>
+<blockquote>
+<p>&#x5982;&#x679C;debounce&#x51FD;&#x6570;&#x8981;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x8BDD;&#x5C31;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x4E86;&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -474,7 +483,7 @@ Throttling enforces a maximum number of times a function can be called over time
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"节流防抖","level":"1.4.3.8","depth":3,"next":{"title":"React","level":"1.5","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"Hooks","level":"1.5.1","depth":2,"path":"react/hooks/README.md","ref":"react/hooks/README.md","articles":[]}]},"previous":{"title":"正则","level":"1.4.3.7","depth":3,"path":"feBasic/javascript/正则.md","ref":"feBasic/javascript/正则.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"feBasic/javascript/节流防抖.md","mtime":"2020-01-29T14:58:03.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-29T14:58:50.187Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"节流防抖","level":"1.4.3.8","depth":3,"next":{"title":"React","level":"1.5","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"Hooks","level":"1.5.1","depth":2,"path":"react/hooks/README.md","ref":"react/hooks/README.md","articles":[]}]},"previous":{"title":"正则","level":"1.4.3.7","depth":3,"path":"feBasic/javascript/正则.md","ref":"feBasic/javascript/正则.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-livereload","fontsettings","sharing","lunr","search","highlight"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"feBasic/javascript/节流防抖.md","mtime":"2020-03-21T14:54:08.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T14:54:48.723Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
