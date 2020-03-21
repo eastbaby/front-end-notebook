@@ -1,5 +1,7 @@
 # REACT
 
+REACT 方法绑定this的各个方法：<https://olafcheng.github.io/2017/08/14/this-in-react-with-es6/>
+
 
 
 componentDidUpdate 是需要props/state有变化才会触发。如果有子组件有自己的state导致dom更新，不会触发父组件的componentDidUpdate。
@@ -13,6 +15,10 @@ componentDidUpdate 是需要props/state有变化才会触发。如果有子组�
 
 
 `props`就是汲取了纯函数的思想。props它最大的特点就是不可变。组件内部不能改变props，否则react报错。注意 props 在function组件中有 capture value 特性（区别于类组件用this.props表现不一样）。（参考：<https://zhuanlan.zhihu.com/p/59558396>）
+
+`props`书写可以用jsx的`...`语法。(<https://zh-hans.reactjs.org/docs/jsx-in-depth.html#spread-attributes>)
+
+
 
 
 
@@ -60,4 +66,24 @@ class MyClass extends React.Component {
 优秀网站：
 
 react最佳实践snippet  <https://github.com/30-seconds/30-seconds-of-react>
+
+
+
+### Key
+
+当元素没有确定 id 的时候，万不得已你可以使用元素索引 index 作为 key。如果你选择不指定显式的 key 值，那么 React 将默认使用索引用作为列表项目的 key 值。
+
+React16.0开始，如果存在前后两个相同的`key`，React会认为这两个元素其实是一个元素，后一个具有相同key值的元素会被忽略。
+
+<https://juejin.im/post/59abb01c518825243f1b6dad>
+
+<https://zh-hans.reactjs.org/docs/lists-and-keys.html>
+
+
+
+### Redux
+
+时光机？
+
+
 

@@ -79,7 +79,7 @@ Function.prototype.mybind = function (context) {
 }
 ```
 
-这里绑定函数指的是上面例子的`bar`函数。
+这里绑定函数指的是上面例子的`bar`函数，代码中的self。
 
 
 
@@ -114,6 +114,12 @@ Function.prototype.mybind = function (context) {
     return fBound;
 }
 ```
+
+
+
+> 【思考】多次bind：不管我们给函数 `bind` 几次，`fn` 中的 `this` 永远由第一次 `bind` 决定。（由于嵌套apply的源码决定）
+
+
 
 参考：
 
