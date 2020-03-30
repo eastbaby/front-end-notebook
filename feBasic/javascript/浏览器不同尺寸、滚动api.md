@@ -13,6 +13,8 @@ var height = document.compatMode=="CSS1Compat" ? document.documentElement.client
 
 > scrollLeft、scrollTop通常直接用window.scrollY、window.scrollX来写。
 
+
+
 ### getBoundingClientRect
 
 返回元素的大小及其**相对于视口**的位置。（注意这里相对位置和绝对定位的设置完全不一样）
@@ -35,3 +37,12 @@ window.scrollTo(x-coord,y-coord )
 window.scrollY // 文档在垂直方向已滚动的像素值。兼容性写法见 https://developer.mozilla.org/zh-CN/docs/Web/API/window/scrollY
 ```
 
+另外还有，scrollIntoView 与 scrollIntoViewIfNeeded ：<https://juejin.im/post/59d74afe5188257e8267b03f>
+
+
+
+## 延伸
+
+### 实现一个懒加载组件
+
+todo
