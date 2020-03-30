@@ -183,6 +183,10 @@ async function handleSubmit(values) {
 
 
 
+由于promise里面一旦状态改变，就不会再变，任何时候都可以得到这个结果。所以aa化的时候内部返回`new promise`，新建一个promise。
+
+
+
 阅读参考[to read]：<https://segmentfault.com/a/1190000007535316>
 
 ## 定时

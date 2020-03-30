@@ -12,3 +12,12 @@
 
 <https://juejin.im/book/5bdc715fe51d454e755f75ef/section/5be927d06fb9a049d81b5fc0>
 
+- package.json
+
+学习各个含义：<https://zhuanlan.zhihu.com/p/33928507>
+
+项目文件名字需要小写。
+
+package.json中的script会安装一定顺序寻找命令对应位置，本地的node_modules/.bin路径就在这个寻找清单中，所以无论是全局还是局部安装的Webpack，你都不需要写前面那指明详细的路径了。
+
+npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用`npm start`就可以执行其对于的命令，不用加`run`。

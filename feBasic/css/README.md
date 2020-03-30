@@ -34,5 +34,11 @@ BFC的应用：
 
 - 猫头鹰选择器`+` （介绍<https://juejin.im/entry/5965c4c66fb9a06bc340b387>）
 
+### 4. 盒子模型
+
+Quirks怪异模式：`box-sizing：border-box`
+
+标准模式：`box-sizing：content-box`
+
 
 

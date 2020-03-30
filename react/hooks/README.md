@@ -1,5 +1,32 @@
 # React Hooks
 
+### 优缺点
+
+### React Hooks 优缺点
+
+#### A.Hooks缺点
+
+尽管我们通过上面的例子看到 React Hooks 的强大之处，似乎类组件完全都可以使用 React Hooks 重写。但是当下 v16.8 的版本中，还无法实现 getSnapshotBeforeUpdate 和 componentDidCatch 这两个在类组件中的生命周期函数。官方也计划在不久的将来在 React Hooks 进行实现。
+
+| Class                                          | Hooks                |
+| ---------------------------------------------- | -------------------- |
+| 代码逻辑清晰（构造函数、componentDidMount 等） | 需要配合变量名和注释 |
+| 不容易内存泄漏                                 | 容易发生内存泄漏     |
+
+#### B.Hooks优点
+
+- 功能更加isolation；
+
+- 避免wrapper hell
+
+Redux 的作者 Dan Abramov [总结](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)了用class组件类的几个缺点。
+
+> - 大型组件很难拆分和重构，也很难测试。
+> - 业务逻辑分散在组件的各个方法之中，导致重复逻辑或关联逻辑。
+> - 组件类引入了复杂的编程模式，比如 render props 和高阶组件。
+
+**React Hooks 的设计目的，就是加强版函数组件，完全不使用"类"，就能写出一个全功能的组件。**React Hooks 的意思是，组件尽量写成纯函数，如果需要外部功能和副作用，就用钩子把外部代码"钩"进来。
+
 ### 1. 基础用法
 
 非常好的文章：<https://github.com/happylindz/blog/issues/19>
@@ -11,17 +38,6 @@ useCallback（记忆函数，配合pureComponent/memo更佳）、useMemo（记�
 useRef（功能强大，可以用来避免function组件的capture value特性）、
 
 useImperativeHandle（配合forwardRef使用）、useLayoutEffect （同步执行副作用，时机：Dom更新-> 同步useLayoutEffect -> 异步useEffect ）
-
-
-
-**React Hooks 优缺点**
-
-缺点：尽管我们通过上面的例子看到 React Hooks 的强大之处，似乎类组件完全都可以使用 React Hooks 重写。但是当下 v16.8 的版本中，还无法实现 getSnapshotBeforeUpdate 和 componentDidCatch 这两个在类组件中的生命周期函数。官方也计划在不久的将来在 React Hooks 进行实现。
-
-| Class                                          | Hooks                |
-| ---------------------------------------------- | -------------------- |
-| 代码逻辑清晰（构造函数、componentDidMount 等） | 需要配合变量名和注释 |
-| 不容易内存泄漏                                 | 容易发生内存泄漏     |
 
 
 
@@ -81,10 +97,6 @@ function App() {
 
 
 比较deps如果是对象object，不是深度比较，而是用的`is`。see.<https://github.com/facebook/react/blob/c1d3f7f1a9/packages/shared/objectIs.js?spm=ata.13261165.0.0.6dee5600znB8bR#L14>
-
-
-
-用useEffect的时候一定要小心闭包的坑。如果在useEffect里面监听一个事件，这时候用`setCount(num + 1)`  的时候拿到的`num` 只是第一次的值，并不会每次触发事件的时候更新到新的`num`。原因：state在每次更新的时候都是一个新的值。解决方案：用函数的写法写`setCount`，即使销毁事件或者用useRef迂回。
 
 
 
@@ -178,7 +190,15 @@ useRef 神奇功能：
 
 当deps是函数的时候，建议都包裹一下。
 
+特别注意，防抖的函数也是要包裹的，不然也防不了父组件的re-render。
+
 #### useMemo
+
+> ```
+> useCallback(fn, inputs) is equivalent to useMemo(() => fn, inputs).
+> ```
+
+**useCallback 不会执行第一个参数函数，而是将它返回给你，而 useMemo 会执行第一个函数并且将函数执行结果返回给你。**
 
 记住，传入 `useMemo` 的函数会在**渲染期间**执行。请不要在这个函数内部执行与渲染无关的操作，诸如副作用这类的操作属于 `useEffect` 的适用范畴，而不是 `useMemo`。
 
@@ -198,6 +218,21 @@ https://stackoverflow.com/questions/53472795/uncaught-error-rendered-fewer-hooks
 
 - 一定要记得开启hooks lint <https://www.npmjs.com/package/eslint-plugin-react-hooks>
 
+- 性能优化（减少不必要的渲染）
+
+  - 函数移动到组件的外面
+  - 放在useEffect、useCallback里面
+
+- 用useEffect的时候一定要小心**闭包的坑**。如果在useEffect里面监听一个事件，这时候用`setCount(num + 1)`  的时候拿到的`num` 只是第一次的值，并不会每次触发事件的时候更新到新的`num`。
+
+  原因：state在每次更新的时候都是一个新的值。
+
+  解决方案：
+
+  - `setCount(prev =>new)`
+  - 用函数的写法写`setCount`并及时销毁事件
+  - 用useRef迂回。
+
 
 
 
@@ -216,3 +251,4 @@ Should I useState or useReducer? <https://kentcdodds.com/blog/should-i-usestate-
 
 [TODO] react hooks 原理：<https://github.com/brickspert/blog/issues/26>
 
+Dan 博客 memory *cells* <https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889>

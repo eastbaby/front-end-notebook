@@ -1,6 +1,16 @@
 # REACT
 
+### 用react的好处
+
+todo 
+
+### 查漏补缺
+
 REACT 方法绑定this的各个方法：<https://olafcheng.github.io/2017/08/14/this-in-react-with-es6/>
+
+
+
+渲染到Native中的叫ReactNative，渲染到Canvas中的叫ReactCanvas，正常用的渲染是ReactDOM。因此会和React库分开使用。
 
 
 
@@ -20,11 +30,15 @@ componentDidUpdate 是需要props/state有变化才会触发。如果有子组�
 
 
 
+不同的router跳转方式<https://www.jianshu.com/p/6a3bfd62bcde>
+
 
 
 Hooks 同样具有 capture value 的特性，利用 `useRef` 可以规避 capture value 特性。
 
 
+
+必看：<https://overreacted.io/zh-hans/writing-resilient-components/>（里面聊到 update -> setState -> update 循环的这种时候如何正确处理）
 
 ### Context
 
@@ -75,15 +89,35 @@ react最佳实践snippet  <https://github.com/30-seconds/30-seconds-of-react>
 
 React16.0开始，如果存在前后两个相同的`key`，React会认为这两个元素其实是一个元素，后一个具有相同key值的元素会被忽略。
 
+React15的时候对于重复的key，会丢弃后面相同的key的item不展示。然而React16的时候对于重复的key全部都展示出来。
+
+When a `key` changes, React will [*create* a new component instance rather than *update* the current one](https://zh-hans.reactjs.org/docs/reconciliation.html#keys). 
+
 <https://juejin.im/post/59abb01c518825243f1b6dad>
 
 <https://zh-hans.reactjs.org/docs/lists-and-keys.html>
 
 
 
+### Virtual DOM
+
+https://github.com/livoras/blog/issues/13
+
+<https://xin-tan.com/passages/2019-11-11-wirte-virtual-dom/>
+
 ### Redux
 
-时光机？
+原理：一定要提一下provider才算答对。
 
+时间旅行
 
+redux公式：state的变化= ui变化。
+
+<https://juejin.im/post/5b9a2f025188255c48349ec1>
+
+### TOREAD
+
+【React深入】从Mixin到HOC再到Hook ： https://juejin.im/post/5cad39b3f265da03502b1c0a
+
+[Immutable 详解及 React 中实践](https://github.com/camsong/blog/issues/3) 
 
